@@ -26,10 +26,10 @@ private
 
 end
 
-require_relative 'rails-sort/active_record_patch'
-require_relative 'rails-sort/query_string'
-require_relative 'rails-sort/uri_constructor'
-require_relative 'rails-sort/view_helper'
+require_relative 'rails_sort/active_record_patch'
+require_relative 'rails_sort/query_string'
+require_relative 'rails_sort/uri_constructor'
+require_relative 'rails_sort/view_helper'
 
 if defined?(Rails)
   ActionView::Base.include RailsSort::ViewHelper

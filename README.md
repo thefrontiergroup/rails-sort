@@ -9,7 +9,7 @@ This is just for consistency - so a consistent set of parameters are used for so
 Include a reference in your Gemfile:
 
 ```ruby
-gem 'rails-sort', github: "thefrontiergroup/rails-sort"
+gem 'rails_sort', github: "thefrontiergroup/rails_sort"
 ```
 
 In your view you can create a sortable heading that will provide a link to toggle the sorting options. Sorting is in the following recurring order:
