@@ -14,9 +14,9 @@ gem 'rails-sortify', github: "thefrontiergroup/rails-sortify"
 
 In your view you can create a sortable heading that will provide a link to toggle the sorting options. Sorting is in the following recurring order:
 
-    1. None
-    2. Asc
-    3. Desc
+1. None
+2. Asc
+3. Desc
 
 The link that is returned will have a class attached to it indicating direction (none, "asc", or "desc"). You can use this to style the link appropriately (EG: up/down arrows)
 
