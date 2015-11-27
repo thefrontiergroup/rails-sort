@@ -30,7 +30,7 @@ If you were on the index action for Users and you wanted to sort by email:
 
 Which will generate the following link:
 
-```html
+```
 <a href="http://localhost:3000?sort_attribute=email&sort_direction=asc">Email</a>
 ```
 
