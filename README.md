@@ -53,3 +53,11 @@ def index
   @users = RailSort.sort(@users, params, {name: :asc})
 end
 ```
+
+We also provide an ActiveRecord monkey patch that allows you to call sort directly on a collection:
+
+```ruby
+def index
+  @users = User.sort(params)
+end
+```
