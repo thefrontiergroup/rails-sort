@@ -26,7 +26,9 @@ private
 
 end
 
-require 'rails_sortify_helper'
+require_relative 'rails-sortify/query_string'
+require_relative 'rails-sortify/uri_constructor'
+require_relative 'rails-sortify/view_helper'
 
 if defined?(Rails)
   ActionView::Base.include RailsSortify::ViewHelper

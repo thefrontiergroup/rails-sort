@@ -1,9 +1,15 @@
-require 'rails_helper'
+require 'spec_helper'
 
 describe RailsSortify::ViewHelper do
 
+  class FakeHelper
+    include ActionView::Helpers::UrlHelper
+    include RailsSortify::ViewHelper
+  end
+
   describe "#sortable_heading_for" do
     subject { helper.sortable_heading_for(attribute, name) }
+    let(:helper) { FakeHelper.new }
     let(:attribute) { "dongle" }
     let(:name) { "Dingle" }
 

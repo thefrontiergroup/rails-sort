@@ -1,6 +1,9 @@
-require 'rails_helper'
+require 'spec_helper'
 
 describe RailsSortify do
+
+  class User < ActiveRecord::Base
+  end
 
   describe ".sort" do
     subject { RailsSortify.sort(scope, params, default_sort_order) }
