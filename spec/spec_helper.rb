@@ -2,8 +2,8 @@ require 'bundler'
 Bundler.require
 require 'rails/all'
 
-# Dir.glob("./lib/rails-sortify/**/*.rb", &method(:require))
-require './lib/rails_sortify'
+# Dir.glob("./lib/rails-sort/**/*.rb", &method(:require))
+require './lib/rails_sort'
 Dir.glob("./lib/support/**/*.rb", &method(:require))
 
 RSpec.configure do |config|

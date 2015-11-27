@@ -1,4 +1,4 @@
-# Rails Sortify
+# Rails Sort
 
 This gem provides some view helpers and a model for performing basic sorts on ActiveRecord models.
 
@@ -9,7 +9,7 @@ This is just for consistency - so a consistent set of parameters are used for so
 Include a reference in your Gemfile:
 
 ```ruby
-gem 'rails-sortify', github: "thefrontiergroup/rails-sortify"
+gem 'rails-sort', github: "thefrontiergroup/rails-sort"
 ```
 
 In your view you can create a sortable heading that will provide a link to toggle the sorting options. Sorting is in the following recurring order:
@@ -36,12 +36,12 @@ Which will generate the following link:
 
 Clicking that link will pass the sort parameters through to your index action.
 
-You can use the RailsSortify model to sort your collection. EG:
+You can use the RailsSort model to sort your collection. EG:
 
 ```ruby
 def index
   @users = User.all
-  @users = RailSortify.sort(@users, params)
+  @users = RailSort.sort(@users, params)
 end
 ```
 
@@ -50,6 +50,6 @@ You can pass through some default sort options that will be used if no sorting h
 ```ruby
 def index
   @users = User.all
-  @users = RailSortify.sort(@users, params, {name: :asc})
+  @users = RailSort.sort(@users, params, {name: :asc})
 end
 ```

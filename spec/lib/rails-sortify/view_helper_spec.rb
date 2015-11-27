@@ -1,10 +1,10 @@
 require 'spec_helper'
 
-describe RailsSortify::ViewHelper do
+describe RailsSort::ViewHelper do
 
   class FakeHelper
     include ActionView::Helpers::UrlHelper
-    include RailsSortify::ViewHelper
+    include RailsSort::ViewHelper
   end
 
   describe "#sortable_heading_for" do
@@ -25,7 +25,7 @@ describe RailsSortify::ViewHelper do
 
       it "returns a link with the sortable URL" do
         expected_uri = "www.jordan_rules.com"
-        expect_any_instance_of(RailsSortify::UriConstructor).to receive(:build_uri_with_cycled_sorting_params).and_return(expected_uri)
+        expect_any_instance_of(RailsSort::UriConstructor).to receive(:build_uri_with_cycled_sorting_params).and_return(expected_uri)
 
         should include("href=\"#{expected_uri}\"")
       end
@@ -54,7 +54,7 @@ describe RailsSortify::ViewHelper do
 
       it "returns a link with the sortable URL" do
         expected_uri = "www.jordan_rules.com"
-        expect_any_instance_of(RailsSortify::UriConstructor).to receive(:build_uri_with_cycled_sorting_params).and_return(expected_uri)
+        expect_any_instance_of(RailsSort::UriConstructor).to receive(:build_uri_with_cycled_sorting_params).and_return(expected_uri)
 
         should include("href=\"#{expected_uri}\"")
       end
