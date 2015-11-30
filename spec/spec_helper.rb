@@ -13,6 +13,9 @@ end
 # Create an in-memory database to do some basic tests with a real model
 ActiveRecord::Base.establish_connection(adapter: "sqlite3", database: ":memory:")
 
+class User < ActiveRecord::Base
+end
+
 ActiveRecord::Schema.define do
   self.verbose = false
 

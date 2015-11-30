@@ -4,7 +4,7 @@ class RailsSort
 
     module ClassMethods
       def sort(parameters, default_sort_options=nil)
-        RailsSort.sort(self, parameters, default_sort_options)
+        RailsSort.sort(all, parameters, default_sort_options)
       end
     end
   end

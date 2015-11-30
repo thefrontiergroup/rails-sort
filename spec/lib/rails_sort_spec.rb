@@ -2,9 +2,6 @@ require 'spec_helper'
 
 describe RailsSort do
 
-  class User < ActiveRecord::Base
-  end
-
   describe ".sort" do
     subject { RailsSort.sort(scope, params, default_sort_order) }
 
