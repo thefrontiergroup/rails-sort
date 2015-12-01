@@ -1,9 +1,9 @@
-require 'rails_helper'
+require 'spec_helper'
 
-describe RailsSortify do
+describe RailsSort do
 
   describe ".sort" do
-    subject { RailsSortify.sort(scope, params, default_sort_order) }
+    subject { RailsSort.sort(scope, params, default_sort_order) }
 
     let(:scope)  { User.all }
     let(:params) { {sort_attribute: "email", sort_direction: sort_direction} }

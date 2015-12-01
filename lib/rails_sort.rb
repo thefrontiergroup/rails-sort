@@ -1,5 +1,5 @@
 # Replaces ModelSorter in RailsTemplate
-class RailsSortify
+class RailsSort
 
   def self.sort(scope, params, default_sort_options=nil)
     sort_attribute = params[:sort_attribute]
@@ -26,8 +26,12 @@ private
 
 end
 
-require 'rails_sortify_helper'
+require_relative 'rails_sort/active_record_patch'
+require_relative 'rails_sort/query_string'
+require_relative 'rails_sort/uri_constructor'
+require_relative 'rails_sort/view_helper'
 
 if defined?(Rails)
-  ActionView::Base.include RailsSortify::ViewHelper
+  ActionView::Base.include RailsSort::ViewHelper
+  ActiveRecord::Base.include RailsSort::ActiveRecordPatch
 end

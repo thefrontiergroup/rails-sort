@@ -1,4 +1,4 @@
-class RailsSortify::QueryString
+class RailsSort::QueryString
 
   # Returns a params string "a=b&c=d" for sortable params for a given attribute.
   #

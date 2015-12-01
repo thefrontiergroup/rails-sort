@@ -1,9 +1,9 @@
-require 'rails_helper'
+require 'spec_helper'
 
-describe RailsSortify::QueryString do
+describe RailsSort::QueryString do
 
   describe "#hash_with_cycled_sorting_params" do
-    subject { RailsSortify::QueryString.new.hash_with_cycled_sorting_params(attribute, sorting_parameters) }
+    subject { RailsSort::QueryString.new.hash_with_cycled_sorting_params(attribute, sorting_parameters) }
     let(:attribute) { "dongle" }
 
     context "with no existing sorting parameters" do

@@ -1,9 +1,9 @@
-require 'rails_helper'
+require 'spec_helper'
 
-describe RailsSortify::UriConstructor do
+describe RailsSort::UriConstructor do
 
   describe "#build_uri_with_cycled_sorting_params" do
-    subject { RailsSortify::UriConstructor.new.build_uri_with_cycled_sorting_params(attribute, path, query_params).to_s }
+    subject { RailsSort::UriConstructor.new.build_uri_with_cycled_sorting_params(attribute, path, query_params).to_s }
     let(:attribute) { "dongle" }
     let(:path) { "www.google.com" }
     let(:query_params) { {"jordan" => "rules"}.merge(sorting_parameters) }

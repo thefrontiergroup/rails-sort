@@ -1,4 +1,4 @@
-class RailsSortify::UriConstructor
+class RailsSort::UriConstructor
 
   # Return a URI object representing the full URI with the existing query string plus
   # sorting parameters. If there are already sorting parameters we will either cycle them
@@ -16,7 +16,7 @@ class RailsSortify::UriConstructor
   #
   def build_uri_with_cycled_sorting_params(attribute, path, query_params)
     uri = URI(path)
-    sortable_query_params = RailsSortify::QueryString.new.hash_with_cycled_sorting_params(attribute, query_params)
+    sortable_query_params = RailsSort::QueryString.new.hash_with_cycled_sorting_params(attribute, query_params)
     # Clone the parameters so that we do not change the actual page parameters
     full_params = query_params.clone
     # Remove any sorting options from the parameters so that we can replace them with nil if required.
